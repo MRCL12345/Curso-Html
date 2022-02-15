@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #d2691e;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}

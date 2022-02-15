@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>marcepro127</title>
+  <style>
+    h2 {
+      color: aqua;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/estilos.css">
+  <link rel="stylesheet" href="assets/estilos.css">
+</head>
+
+<body>
+  <!---->
+  <h1>Proosidad</h1>
+
+  <hr>
+
+  <h2 id="encabezados">encabezados</h2>
+
+  <p>
+    <b>Esto es un parrafo:</b> <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Animi incidunt aperiam maiores eius doloribus libero illum
+    quisquam facilis voluptas.
+    Accusamus iure delectus dolorem neque tenetur inventore blanditiis quaerat saepe est!
+  </p>
+
+  <hr>
+
+  <h2>Etiquetas de texto Semanticas</h2>
+
+  <p>
+    <strong>Palabras sabias...</strong>
+  <blockquote>Yo solo se que no se nada.</blockquote>
+  <cite>Socrates</cite>
+  </p>
+
+  <hr>
+
+  <h2 id="saltos en linea">Saltos de linea</h2>
+
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+    Illum ipsa accusamus sequi cupiditate blanditiis, enim dolores a.<br>
+    Quod deserunt ratione eum veritatis ea itaque, quas illum quisquam explicabo mollitia? Minima!
+  </p>
+
+  <hr>
+
+  <h2>Etiquetas de formateo</h2>
+
+  <p>
+  <pre> <!--el pre es para que te valide los espacios-->
+      Tareas por hacer:
+      -HTML
+        -Aprender HTML 
+        -Aprender CSS 
+      -JavaScript
+        -Aprender Javascript
+    </pre>
+  </p>
+
+  <hr>
+
+  <p>
+  <pre>
+      <code>Esto esta en formato de codigo</code> <!--el code es para cuanod hagas un ejemplo de un codigo-->
+    </pre>
+  </p>
+
+  <p>
+  <pre>
+      <code>
+        import React from "react";
+        import Title from "./Title";
+        
+        function App {
+        return
+        &lt;Title/&gt; <!--mira que indica un error aqui en el <title/<; entonces escribelo con &lt;Title /&gt; -->
+        }
+      </code>
+    </pre>
+  </p>
+
+  <hr>
+
+  <h2>Etiquetas Semanticas Estructurales</h2>
+
+  <div>Esto es una etiqueta contenedora que no tiene semantica</div>
+
+  <header>header es una cabecera de un sitio web o una seccion</header>
+
+  <main>
+    main define la seccion principal del documento, solo puede existir una etiqueta main por documento
+  </main>
+
+  <footer> footer es el pie de pagina de un sitio web o de una seccion</footer>
+
+  <nav>nav representa una navegacion</nav>
+
+  <article>
+    Article representa una seccion de autocontenido (por si sola entiendes le contenido sin tener la interfaz del sitio,
+    la parte donde va todo el articulo del blog)
+  </article>
+
+  <aside> aside representa contenido complementario o secundario, podriamos meter alguna lista de articulos
+    relacionados, para en los sitios web donde metemos publicidad etc</aside>
+
+  <section> section representa una seccion de contenido generico</section>
+
+  <address>address representa una direccion fisica si lo quieren ver asi o informacion de contacto</address>
+
+  <!--para poner en practica estas etiquetas sematicas estructurales el cocepto de maquetacion no es mas que el acomodo de como tenemos el contenido de esto, maquetacion es como la figura y el orden de donde estan en la pagina -->
+
+  <hr>
+
+  <h2>Etiquetas de bloque vs Etiquetas de linea</h2>
+  <!--! En CSS lo veremos mas a fondo esto pero desde html es importante entender que de todas las etiquetas de html de todas las etiquetas hay un conjunto que trabajan en linea y otro en bloque-->
+  <div>La etiqueta de bloque por excelencia es div</div>
+  <span> La etiqueta de linea por excelencia es span</span>
+  <!--TODO: Las etiquetas que se comportan en etiquetas de bloque van a generar como si fuera un enter arriba como abajo, y las de lina solo ocupa el espacio necesario que tiene su contenido -->
+
+  <hr>
+
+  <h2 id="css estilos">Estilos CSS en HTML</h2>
+
+  <!-- <div style="background-color: yellow; color: red;"> gooool -->
+  <!-- <span style="background-color: yellow; color: blue;"> gooolazooo -->
+  <!-- cuando quieras ponerle relleno a los textos solo pon ="background-color: (el color que quieras);" y si le quieres cambiar color al texto solo dale un espacio escribe "color: (color que quieras);" y cierra parentesis, ponle un > y seguido escribe el texto -->
+  <!-- O tambien otra opcion es como la que se muestra en la cabecera, en la cabecera hacer un estilo, pones por ejemplo si quieres que a todos los h2 tengan un color especifico, escribes h2 y luego pones un juego de llaves y pones color: seguido de que color quieres, (tambien lo puedes poner en el body esto)-->
+  <!--! LINEA 9-->
+  <!----------------------------->
+  <!--!Ahora la forma mas correcta de aplicar una con estilos es manejar una hoja de estilos-->
+  <!--TODO: fijate vamos a crear una carpeta que se llame assets y dentro de esta creare un archivo que se llame estilos.css-->
+  <!-- pero para que sirva hay que enlazarlo y para enlazarlo te vas a la cabeza del documento, escribe <link rel="stylesheet" href= "assets/estilos.css"> -->
+  <!--! LINEA 14-->
+  <!-- y ahora si quieres editar un estilo ahi te funcionara como se muestra en el archivo estilos-->
+  <!--------------------------------------------------------------------------------------------------->
+  <hr>
+
+  <h2>Scripts en HTML</h2>
+  <!-- hay dos formas de poner script, la Pimera es mediante la etiqueta script de preferencia ponlos al final antes del cierre de la etiqueta body  como se muestra abajo-->
+  <script>
+    console.log("Hola estamos aprendiendo HTML");
+  </script>
+  <!-- La dorma ideal es que el script este en archivos indepenientes, observa hagamos una extension para javascript llamado condigos.js y para implementarlo en este html es asi-->
+  <script src="assets/codigos.js"></script>
+  <!---------------------------------------------------------->
+  <hr>
+  <h2 id="imagenes">Imagenes</h2>
+  <!--pones la etiqueta para agregar una imagen (img) y pones el atributo source (src) = seguido de poner entre comillas la ruta, y el atributo alt que es un texto alternativo que si tu imagen esta rota este es el texto que va a cargar en vez de la imagen-->
+  <img src="img/proosidad.gif" alt="Gif de Hoplita">
+  <img src="img/9344303f-ff63-430a-9357-4a711b7ab91a.jfif" alt="Imagenxd">
+  <!--Y para cambiar su anchura y altura la forma ideal es a travez de el archivo estilos.css en este caso como ves en ese archivo-->
+  <!--Es popular es usar vectores como imagenes ya que estos no se pierde su calidad como imagen (SVG)-->
+  <!--------------------------------------------------------->
+  <hr>
+  <h2 id="figuras">Figuras</h2>
+  <figure>
+    <img src="img/9344303f-ff63-430a-9357-4a711b7ab91a.jfif" alt="tabla de clases">
+    <!--para hacer una figura pones una imagen dentro de ella-->
+    <figcaption>Tabla de las clases</figcaption> <!-- figcaption es como al descripcion de la figura-->
+  </figure>
+  <h2>Listas ordenadas</h2>
+  <h3>Estaciones del año</h3>
+  <ol>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ol>
+  <!------------------->
+  <ol start="3">
+    <!--significa que esta lsita empezara desde el numero 3-->
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ol>
+  <!----------->
+  <ol reversed>
+    <!--Para hacerlo al revez de 54321-->
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ol>
+  <!------------>
+  <ol type="A">
+    <!-- la forma para que en vez de numeros te salgan con abc, o numeros romanos entre otras, en este caso la puse con abc en mayusculas-->
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ol>
+  <!------------->
+  <hr>
+  <h2> listas desordenadas</h2>
+  <h3>cosas por hacer</h3>
+  <ul>
+    <li>blablabla</li>
+    <li>blablabla</li>
+    <li>blablabla</li>
+  </ul>
+  <!----->
+  <ul type="circle">
+    <!--Para cambiar las viñetas, puede ser con disc,square y circle-->
+    <li>blablabla</li>
+    <li>blablabla</li>
+    <li>blablabla</li>
+  </ul>
+  <!----------------------------------------->
+  <hr>
+  <h2>Listas de definicion</h2>
+  <dl>
+    <dt>HTML</dt>
+    <dd>Es un lenguaje de marcado que define el contenido de la web</dd>
+    <dt>CSS</dt>
+    <dd>Es un lenguaje de definicion que da estilos estilos al codigo html</dd>
+  </dl>
+  <!---------------------->
+  <hr>
+  <h2>Tablas</h2>
+  <table>
+    <tr>
+      <!--tablas basicas-->
+      <td>Nombre</td>
+      <td>Constelacion</td>
+      <td>Tipo</td>
+    </tr>
+    <tr>
+      <td>Likki</td>
+      <td>Fenix</td>
+      <td>Bronce</td>
+    </tr>
+    <tr>
+      <td>Shaina</td>
+      <td>Ofiuco</td>
+      <td>Plata</td>
+    </tr>
+  </table>
+  <table>
+    <!-- Tablas mas completas-->
+    <tbody>
+      <thead>
+        <tr>
+          <th colspan="3">
+            <!-- el colspan es para ver cuantos espacios abajo-->
+            Tabla de los santos de athena
+          </th>
+        </tr>
+        <!----->
+        <tr>
+          <th>Nombre</th>
+          <th>Constelacion</th>
+          <th>Tipo</th>
+        </tr>
+
+      </thead>
+      <td>Nombre</td>
+      <td>Constelacion</td>
+      <td>Tipo</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Likki</td>
+        <!--Rowspan es para que esa palabra ocupe ciertos espacios en este caso 2-->
+        <td>Fenix</td>
+        <td>Bronce</td>
+      </tr>
+      <tr>
+        <td>Shaina</td>
+        <td>Ofiuco</td>
+        <td>Plata</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <!--!---------------------------ENLACES------------------------------------>
+  <br>
+  <h2 id="enlaces">ENLACES</h2>
+  <!--Enlace 1-->
+  <a href="hola.html">Hacia la paginaHola</a>
+  <!--El href en los enlaces es lo que me permitira ir hacia ontra instancia-->
+  <!-- Entre el parentesis pones el nombre y formato de el otro documento al que quieres que se mande-->
+  <!--Enlace 2-->
+  <!--le pondre un salto de linea-->
+  <br>
+  <a href="https://jonmircha.com">Visita mi sitio web</a>
+  <!--Y para que cuando entres al link no te cargue en la pagina principal, y te cargue el link en otra pestaña has esto, pones el target y entre las comillas pones _blank para que salga en otra pestaña el enlace-->
+  <br>
+  <a href="https://jonmircha.com" target="_blank">Visita mi sitio web</a>
+  <!-- cuando sean enlaces externos te rcomiendo poner el formato rel y entre las comillas pones "nofollow" para que las arañas de los motores de busqueda sepan que este enlace no forma parte de la app o sitio en el que estamos-->
+  <br>
+  <a href="https://jonmircha.com" target="_blank" rel="nofollow">Visita el sitio web externo de jonmircha</a>
+  <br>
+  <!--Tambien podemos hacer vectores o imagenes en los enlaces-->
+  <a href="https://jonmircha.com" target="_blank"><img src="9344303f-ff63-430a-9357-4a711b7ab91a.jfif"></a>
+  <!--Asi como un boton es el de arriba-->
+  <!--Si le quieres poner texto has esto-->
+  <a href="https://jonmircha.com" target="_blank"><img src="9344303f-ff63-430a-9357-4a711b7ab91a.jfif"
+      alt="Ir hacia mis cursos v"></a>
+  <!--!---------ENLACES O ANCLAS INTERNAS DENTRO DE UN MISMO DOCUMENTO--------------->
+  <br>
+  <h2 id="enlaces internos">ENLACES INTERNOS</h2>
+  <!--TODO Un enlace interno es cuando hacer lo de arriba (haces un icono o texto que te lleva a un lugar) solo que esta vez te mandara a una seccion dentro de la misma pagina-->
+  <h2 id="enlaces internos" Enlaces internos></h2>
+  <h4>Te recomendamos pasarte por las secciones de encabezados,imagenes y estilos css</h4>
+  <small>Estos son enlaces internos</small>
+  <ul>
+    <!--Escribes tu archivo principal seguido un # y pones exactamente el id que le pusiste a tus h2 por ejemplo. Luego cierras > y seguido pones el texto que quieres que salga -->
+    <li><a href="html.html#encabezados">encabezados</a></li>
+    <li><a href="html.html#imagenes">imagenes</a></li>
+    <li><a href="html.html#css estilos">estilos css</a></li>
+    <!--Para editar animadamente esto y que no te lleve de golpe a donde quieres, se usa css pero te enseñaremos aqui, ve a estilos.css en la linea que dice html de ese archivo y lo veras en el archivo aaa.html-->
+    <!--!PROTOCOLOS A ENLACES-->
+    <!--Supon que quieres mandar un correo a jonmircha o marcar un telefono, con estos podemos hacerlo-->
+    <a href="mailto:gola@jonmircha.com">Enlace a correo electronico</a>
+    <a href="tel:524622865152">Enlace a telefono</a>
+    <br>
+    <!--Y que tal con whatsapp (cuando en la url de la pagina por ejemplo que quieres poner si sale un signo de ? es porque seguido de este puedes poner variables)-->
+    <a href="https://api.whatsapp.com/send?phone=524622865152&text=hola">ve contactanos por whatsapp</a>
+    <br>
+    <!--!ELEMENTOS INTERACTIVOS-->
+    <h2 id="Elementos interactivos"></h2>
+    <button>este es un boton</button>
+    <br>
+    <!--Pa hacer acordeon como el de jonmircha-->
+    <details>
+      <summary>Titulo del caordeon</summary>
+      <article>
+        <h3>Contenido del acordeon</h3>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p> <img
+          src="img/proosidad.gif" alt="imagen de proosidad">
+      </article>
+    </details>
+    //-----------------------------
+    <details open>
+      <summary>Otro acordeon abierto sin seleccionarlo</summary>
+      <article>
+        <h3>Si<h3>
+            <p>siiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
+      </article>
+    </details>
+    <!--* DIALOG-->
+    <dialog open>
+      Esto es una ventana modal HTML
+    </dialog>
+</body>
